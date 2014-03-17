@@ -58,17 +58,10 @@ Add a file called ``site.cfg``, with the following lines
 
 .. sourcecode:: linux-config
 
-  [default]
-  include_dirs = /opt/openblas/include
-  library_dirs = /opt/openblas/lib
-
   [openblas]
-  openblas_libs = openblas
+  libraries = openblas
   library_dirs = /opt/openblas/lib
-
-  [lapack]
-  lapack_libs = openblas
-  library_dirs = /opt/openblas/lib
+  include_dirs = /opt/openblas/include
 
 This file lets Numpy know where your OpenBLAS libraries are. Run
 ``python setup.py config`` to make sure everything is set up correctly.
